@@ -30,15 +30,21 @@ play.addEventListener('click', function (event) {
     event.preventDefault()
 
     // Cicle to generate cell into DOM
-    for(let i = 0; i < totalCells; i++) {
+    for(let i = 1; i <= totalCells; i++) {
         // Create a variable to save cell element
         const cell = createCell();
 
         // Insert the numbers in the cell
-        cell.innerText = i + 1
+        cell.innerText = i
 
         // Insert cell into DOM
         mainGame.appendChild(cell);
+
+        // Add class Active at the click on the cell
+        cell.addEventListener('click', function () {
+            cell.classList.add('active');
+            console.log(i)
+        })
     }
 
 })
