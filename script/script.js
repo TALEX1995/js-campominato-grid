@@ -7,13 +7,6 @@ const levelDiff = document.getElementById('difficulty-level');
 const mainGame = document.querySelector('.row');
 
 
-// Initial data
-
-let rows = 10;
-let cols = 10;
-let totalCells = rows * cols;
-
-
 // Function
 const createCell = () => {
     const cell = document.createElement('div');
@@ -28,6 +21,14 @@ const createCell = () => {
 play.addEventListener('click', function (event) {
     // Stoped submit event
     event.preventDefault()
+
+    // Refresh game
+    mainGame.innerHTML = ''
+
+    // Initial data
+    let rows = 10;
+    let cols = 10;
+    let totalCells = rows * cols;
 
     // Change row and cols based on levelDiff Value
     if (parseInt(levelDiff.value) === 2) {
