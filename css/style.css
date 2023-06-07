@@ -31,14 +31,27 @@ main {
 }
 
 .container .cell {
-    width: calc(100% / 10);
-    height: calc(100% / 10);
     border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 25px;
     cursor: pointer;
+}
+
+.cell.ten-cell {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+
+.cell.nine-cell {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+
+.cell.eight-cell {
+    width: calc(100% / 8);
+    height: calc(100% / 8);
 }
 
 .cell.active {

@@ -12,7 +12,7 @@ const createCell = () => {
     const cell = document.createElement('div');
     cell.classList.add('cell')
     
-    return cell
+    return cell;
 }
 
 
@@ -51,6 +51,16 @@ play.addEventListener('click', function (event) {
 
         // Insert cell into DOM
         mainGame.appendChild(cell);
+
+        // Condition to change cell width
+        if (totalCells === 100) {
+            cell.classList.add('ten-cell');
+        }   else if (totalCells === 81) {
+            cell.classList.add('nine-cell')
+        }   else {
+            cell.classList.add('eight-cell');
+        }
+
 
         // Add class Active at the click on the cell
         cell.addEventListener('click', function () {
