@@ -40,6 +40,10 @@ main {
     font-size: 25px;
 }
 
+.cell.active {
+    background-color: lightblue;
+}
+
 /* Footer */
 
 footer {
