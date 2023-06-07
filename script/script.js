@@ -31,7 +31,14 @@ play.addEventListener('click', function (event) {
 
     // Cicle to generate cell into DOM
     for(let i = 0; i < totalCells; i++) {
-        
+        // Create a variable to save cell element
+        const cell = createCell();
+
+        // Insert the numbers in the cell
+        cell.innerText = i + 1
+
+        // Insert cell into DOM
+        mainGame.appendChild(cell);
     }
 
 })
